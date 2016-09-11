@@ -1,0 +1,8 @@
+.tmp
+.DS_Store
+.DS_Store?
+config/auth.js
+node_modules/
+public/vendor/
+dist/
+scripts/
