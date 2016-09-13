@@ -1,8 +1,8 @@
 // contatooh/app/routes/index.js
 
-module.exports = function(app){
+module.exports = function(app) {
 
-	app.get('/', function(req, res){
+	app.get('/', function(req, res) {
 		var login = '';
 		if (req.user) {
 			login = req.user.login;

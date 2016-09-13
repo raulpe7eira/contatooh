@@ -2,21 +2,21 @@
 
 var ContatosPage = require('./pages/ContatosPage');
 
-describe('Página principal', function(){
+describe('Página principal', function() {
 
 	var pagina = new ContatosPage();
 
-	beforeEach(function(){
+	beforeEach(function() {
 		pagina.visitar();
 	});
 
-	it('Deve estar logado', function(){
-		pagina.obtemUsuarioLogado().then(function(texto){
+	it('Deve estar logado', function() {
+		pagina.obtemUsuarioLogado().then(function(texto) {
 			expect(texto.trim().length).toBeGreaterThan(0);
 		});
 	});
 
-	it('Deve remover um contato da lista', function(){
+	it('Deve remover um contato da lista', function() {
 		var totalAntes = pagina.obterTotalDeItensDaLista();
 		pagina.removerPrimeiroItemDaLista();
 		expect(pagina.obterTotalDeItensDaLista()).toBeLessThan(totalAntes);

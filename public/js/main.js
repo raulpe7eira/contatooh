@@ -1,6 +1,6 @@
 // contatooh/public/js/main.js
 
-angular.module('contatooh', ['ngRoute', 'ngResource']).config(function($httpProvider, $routeProvider){
+angular.module('contatooh', ['ngRoute', 'ngResource']).config(function($httpProvider, $routeProvider) {
 
 	$httpProvider.interceptors.push('authInterceptor');
 
@@ -23,6 +23,8 @@ angular.module('contatooh', ['ngRoute', 'ngResource']).config(function($httpProv
 		controller: 'ContatoController'
 	});
 
-	$routeProvider.otherwise({redirectTo: '/contatos'});
+	$routeProvider.otherwise({
+		redirectTo: '/contatos'
+	});
 
 });

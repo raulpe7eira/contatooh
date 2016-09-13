@@ -6,7 +6,7 @@ var passport = require('passport');
 var helmet = require('helmet');
 var expressLoad = require('express-load');
 
-module.exports = function(){
+module.exports = function() {
 
 	var app = express();
 
@@ -21,7 +21,7 @@ module.exports = function(){
 	app.set('views', './app/views');
 
 	// override delete and put http-header
-	app.use(bodyParser.urlencoded({extended: true}));
+	app.use(bodyParser.urlencoded({ extended: true }));
 	app.use(bodyParser.json());
 	app.use(require('method-override')());
 
@@ -43,13 +43,13 @@ module.exports = function(){
 	app.disable('x-powered-by');
 
 	// load mWc
-	expressLoad('models', {cwd: 'app'})
+	expressLoad('models', { cwd: 'app' })
 		.then('controllers')
 		.then('routes')
 		.into(app);
 
 	// 404
-	app.get('*', function(req, res){
+	app.get('*', function(req, res) {
 		res.status(404).render('404');
 	});
 

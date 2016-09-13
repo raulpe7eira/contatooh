@@ -1,8 +1,8 @@
 // contatooh/app/routes/contato.js
 
-function verificaAutenticacao(req, res, next){
+function verificaAutenticacao(req, res, next) {
 
-	if (req.isAuthenticated()){
+	if (req.isAuthenticated()) {
 		return next();
 	} else {
 		res.status(401).json('Não autorizado');
@@ -10,7 +10,7 @@ function verificaAutenticacao(req, res, next){
 
 }
 
-module.exports = function(app){
+module.exports = function(app) {
 
 	var controller = app.controllers.contato;
 
