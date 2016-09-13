@@ -8,7 +8,7 @@ var contatos = [
 
 var MongoClient = require('mongodb').MongoClient;
 
-MongoClient.connect('mongod:/127.0.0.1:27017/contatooh_tst', function(erro, db) {
+MongoClient.connect('mongodb://127.0.0.1:27017/contatooh_tst', function(erro, db) {
 
 	if (erro) {
 		throw erro;
