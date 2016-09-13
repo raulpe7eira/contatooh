@@ -26,12 +26,7 @@ exports.config = {
 				// login page + authorize application (optional)
 				browser.driver.findElement(by.id('login_field')).sendKeys(config.seleniumUsername);
 				browser.driver.findElement(by.id('password')).sendKeys(config.seleniumPassword);
-				browser.driver.findElement(by.name('commit')).click()
-					.then(function() {
-						browser.driver.getCurrentUrl(function(url) {
-							console.log(url);
-						});
-					});
+				browser.driver.findElement(by.name('commit')).click();
 
 			});
 	}
