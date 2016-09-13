@@ -6,7 +6,7 @@ var contatos = [
 	{ nome: 'xyz3', email: 'xyz3@email.me' }
 ];
 
-var MongoClient = require('mongod').MongoClient;
+var MongoClient = require('mongodb').MongoClient;
 
 MongoClient.connect('mongod:/127.0.0.1:27017/contatooh_tst', function(erro, db) {
 
