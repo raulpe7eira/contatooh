@@ -10,7 +10,7 @@ describe('ContatoController', function() {
 			$scope = $injector.get('$rootScope').$new();
 
 			$httpBackend = _$httpBackend_;
-			$httpBackend.expectGET('/contatos/1').respond({ id: '1' });
+			$httpBackend.expectGET('/contatos/1').respond({ _id: '1' });
 			$httpBackend.expectGET('/contatos').respond([{}]);
 		});
 	});
