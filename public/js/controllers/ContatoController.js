@@ -31,6 +31,7 @@ angular.module('contatooh').controller('ContatoController', function($scope, $ro
 					texto: 'Não foi possível salvar'
 				};
 			});
+		$scope.$broadcast('evtContatoSalvo');
 	};
 
 	// contatos disponíveis p/ emergência
