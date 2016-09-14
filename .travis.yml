@@ -9,7 +9,7 @@ env:
 addons:
   sauce_connect: true
 notifications:
-  - raul.pereira@gmail.com
+  email: false
 before_install:
   - npm install -g bower@1.7.9
   - npm install -g grunt-cli@1.2.0
@@ -21,7 +21,8 @@ before_script:
   - node test/data.js
   - grunt
   - cd dist
+  - node server &
+  - sleep 10
 script:
   - karma start config/karma.config.js --single-run --browsers PhantomJS
-  - node server &
   - protractor config/protractor.config.js
