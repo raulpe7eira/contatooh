@@ -1,0 +1,25 @@
+environment:
+  global:
+    - NODE_ENV: tst
+  nodejs_version: "4.5.0"
+services:
+  - mongodb
+install:
+  - ps: Install-Product node $env:nodejs_version
+  - npm install -g bower@1.7.9
+  - npm install -g grunt-cli@1.2.0
+  - npm install -g karma-cli@1.0.1
+  - npm install -g protractor@4.0.5
+  - webdriver-manager update
+  - bower install
+  - npm install
+before_test:
+  - node test/data.js
+  - grunt
+  - cd dist
+  - node server &
+  - sleep 10
+test_script:
+  - karma start config/karma.config.js --single-run --browsers PhantomJS
+  - protractor config/protractor.config.js
+build: off
