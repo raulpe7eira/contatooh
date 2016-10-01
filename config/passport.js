@@ -9,6 +9,8 @@ module.exports = function() {
 
 	var Usuario = mongoose.model('Usuario');
 
+	console.log(config.clientID);
+
 	// configura a estratégia de autenticação
 	passport.use(new GitHubStrategy({
 		clientID: config.clientID,
