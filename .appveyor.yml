@@ -1,6 +1,6 @@
 environment:
   global:
-    NODE_ENV: tst
+    NODE_ENV: "tst"
   nodejs_version: "4.5.0"
 services:
   - mongodb
