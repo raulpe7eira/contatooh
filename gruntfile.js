@@ -7,6 +7,9 @@ module.exports = function(grunt) {
 		clean: {
 			dist: {
 				src: 'dist'
+			},
+			coverage: {
+				src: 'test/coverage'
 			}
 		},
 

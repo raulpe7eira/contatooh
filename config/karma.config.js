@@ -37,7 +37,9 @@ module.exports = function(config) {
 		// preprocess matching files before serving them to the browser
 		// available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
 		preprocessors: {
-			'public/js/directives/**/*.html': ['ng-html2js']
+			'public/js/directives/**/*.html': ['ng-html2js'],
+			'public/js/**/*.js': ['coverage']
+
 		},
 
 
@@ -48,10 +50,21 @@ module.exports = function(config) {
 		},
 
 
+		// specific config for coverage
+		coverageReporter: {
+			type: 'lcov',
+			dir: 'test/coverage/'
+		},
+
+		// specific config for mocha
+ 		mochaReporter: {
+      		output: "autowatch"
+		},
+
 		// test results reporter to use
 		// possible values: 'dots', 'progress'
 		// available reporters: https://npmjs.org/browse/keyword/karma-reporter
-		reporters: ['progress'],
+		reporters: ['progress', 'mocha', 'coverage'],
 
 
 		// web server port
