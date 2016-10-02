@@ -29,7 +29,7 @@ before_test:
   - node test/data.js
   - grunt
   - cd dist
-  - forever start server
+  - forever start server.js
   - sleep 10
 
 test_script:
