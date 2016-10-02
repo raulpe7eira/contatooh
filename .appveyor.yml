@@ -14,6 +14,7 @@ services:
 
 install:
   - ps: Install-Product node $env:nodejs_version
+  - npm install -g forever@0.15.2
   - npm install -g bower@1.7.9
   - npm install -g grunt-cli@1.2.0
   - npm install -g karma-cli@1.0.1
@@ -28,7 +29,7 @@ before_test:
   - node test/data.js
   - grunt
   - cd dist
-  - start /min /b node server
+  - forever start server
   - sleep 10
 
 test_script:
