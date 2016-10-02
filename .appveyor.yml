@@ -28,7 +28,7 @@ before_test:
   - node test/data.js
   - grunt
   - cd dist
-  - start /b node server
+  - start /min node server
   - sleep 10
 
 test_script:
