@@ -28,7 +28,8 @@ before_test:
   - node test/data.js
   - grunt
   - cd dist
-  - start "" node server
+  - start /b node server
+  - sleep 10
 
 test_script:
   - karma start config/karma.config.js --single-run --browsers PhantomJS
