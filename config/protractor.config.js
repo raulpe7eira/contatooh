@@ -14,11 +14,12 @@ exports.config = {
 		'build': config.travisBuildNumber
 	},
 
-	specs: ['../test/e2e/**/*.js'],
-
+	// appveyor integration
 	localSeleniumStandaloneOpts: {
 		args: ['-Djna.nosys=true']
 	},
+
+	specs: ['../test/e2e/**/*.js'],
 
 	onPrepare: function() {
 		browser.driver.get('http://' + config.domain + '/#/auth')
