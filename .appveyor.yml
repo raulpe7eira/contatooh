@@ -3,7 +3,7 @@
 environment:
   global:
     NODE_ENV: "tst"
-  nodejs_version: "4.5.0"
+  nodejs_version: "4.6.0"
 
 cache:
   - public/vendor -> bower.json
