@@ -16,6 +16,10 @@ exports.config = {
 
 	specs: ['../test/e2e/**/*.js'],
 
+	localSeleniumStandaloneOpts: {
+		args: ['-Djna.nosys=true']
+	},
+
 	onPrepare: function() {
 		browser.driver.get('http://' + config.domain + '/#/auth')
 			.then(function() {
