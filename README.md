@@ -4,6 +4,6 @@
 
 [![dependencies status](https://david-dm.org/raulpereira/contatooh/status.svg)](https://david-dm.org/raulpereira/contatooh) [![devDependencies status](https://david-dm.org/raulpereira/contatooh/dev-status.svg)](https://david-dm.org/raulpereira/contatooh?type=dev)
 
-[![Coverage Status](https://coveralls.io/repos/github/raulpereira/contatooh/badge.svg?branch=master)](https://coveralls.io/github/raulpereira/contatooh?branch=maste) [![known vulnerabilities](https://snyk.io/test/github/raulpereira/contatooh/badge.svg)](https://snyk.io/test/github/raulpereira/contatooh)
+[![coverage status](https://coveralls.io/repos/github/raulpereira/contatooh/badge.svg)](https://coveralls.io/github/raulpereira/contatooh) [![known vulnerabilities](https://snyk.io/test/github/raulpereira/contatooh/badge.svg)](https://snyk.io/test/github/raulpereira/contatooh)
 
 Aplicação teste do livro MEAN da editora Casa do Código.

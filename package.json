@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "test": "karma start config/karma.config.js --single-run --browsers PhantomJS | protractor config/protractor.config.js"
+    "test": "karma start config/karma.config.js --single-run --browsers PhantomJS && protractor config/protractor.config.js"
   },
   "author": "Raul Pereira <raul.pereira@gmail.com>",
   "license": "ISC",
