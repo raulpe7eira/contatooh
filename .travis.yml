@@ -44,4 +44,4 @@ script:
   - protractor config/protractor.config.js
 
 after_success:
-  - cat ./coverage/lcov.info | coveralls
+  - cat ./test/coverage/**/lcov.info | coveralls
