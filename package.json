@@ -20,7 +20,7 @@
     "helmet": "^2.3.0",
     "method-override": "^2.3.6",
     "mongo-sanitize": "^1.0.0",
-    "mongoose": "^4.6.2",
+    "mongoose": "^5.7.5",
     "mongoose-findorcreate": "^0.1.2",
     "passport": "^0.3.2",
     "passport-github": "^1.1.0"
