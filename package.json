@@ -5,7 +5,9 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "test": "karma start config/karma.config.js --single-run --browsers PhantomJS && protractor config/protractor.config.js"
+    "test": "karma start config/karma.config.js --single-run --browsers PhantomJS && protractor config/protractor.config.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "author": "Raul Pereira <raul.pereira@gmail.com>",
   "license": "ISC",
@@ -23,7 +25,8 @@
     "mongoose": "^4.6.2",
     "mongoose-findorcreate": "^0.1.2",
     "passport": "^0.3.2",
-    "passport-github": "^1.1.0"
+    "passport-github": "^1.1.0",
+    "snyk": "^1.317.0"
   },
   "devDependencies": {
     "grunt": "^1.0.1",
@@ -43,5 +46,6 @@
     "karma-ng-html2js-preprocessor": "^1.0.0",
     "karma-phantomjs-launcher": "^1.0.2",
     "mongodb": "^2.2.10"
-  }
+  },
+  "snyk": true
 }
