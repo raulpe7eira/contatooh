@@ -22,7 +22,7 @@
     "mongo-sanitize": "^1.0.0",
     "mongoose": "^5.11.7",
     "mongoose-findorcreate": "^0.1.2",
-    "passport": "^0.3.2",
+    "passport": "^0.6.0",
     "passport-github": "^1.1.0"
   },
   "devDependencies": {
